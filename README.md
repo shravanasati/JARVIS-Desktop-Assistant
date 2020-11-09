@@ -10,13 +10,15 @@ NOTE: Provide URLs and application paths for the repective sites/apps to run thi
 - selenium --> ```pip install selenium``` == For internet connectivity and browser control.
 - pyaudio --> ```pip install pyaudio``` == Dependency for speech recognition module.
 
-## Solving issues
-1. If you are unable to install *pyaudio*, type the following commands:
+### Solving issues
+1. If you are unable to install ```pyaudio```, type the following commands:
+
 ```pip install pipwin```
+
 ```pipwin install pyaudio```
 
 It should work now.
 
 
 2. For the selenium module, you'll need to install drivers for the respective browsers.
-Find them here: https://selenium-python.readthedocs.io/installation.html
+Find them here: https://selenium-python.readthedocs.io/installation.html#drivers
