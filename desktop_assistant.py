@@ -97,15 +97,15 @@ def screen_recording():
     p.typewrite('687', 2)
     a.speak("You're ready to record, just press F7 to continue. Say stop screen recording to stop it.")
 
-
+    
 def access_web(url):
-    wb = webdriver.Firefox(executable_path = r"C:\Users\Lenovo\Downloads\Programs\geckodriver.exe")
+    wb = webbrowser.Mozilla(r"C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
     try:
-        wb.get(url)
+        wb.open_new_tab(url)
+
     except Exception as e:
         print(e)
-        speak("Invalid url")
-
+        speak("Some error occured!")
 
 
 if __name__ == "__main__":
