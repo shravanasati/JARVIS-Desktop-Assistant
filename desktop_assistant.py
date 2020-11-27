@@ -1,5 +1,4 @@
 import pyttsx3, datetime, speech_recognition as sr, wikipedia, os, random, json, requests, pyautogui as p, time
-from selenium import webdriver
 
 # own modules
 from news_reporter import general_news, tech_news
@@ -98,14 +97,8 @@ def screen_recording():
     a.speak("You're ready to record, just press F7 to continue. Say stop screen recording to stop it.")
 
     
-def access_web(url):
-    wb = webbrowser.Mozilla(r"C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
-    try:
-        wb.open_new_tab(url)
-
-    except Exception as e:
-        print(e)
-        speak("Some error occured!")
+def access_web(url:str):
+    webbrowser.open_new_tab(url)
 
 
 if __name__ == "__main__":
@@ -130,11 +123,11 @@ if __name__ == "__main__":
             except Exception as e:
                 a.speak(e)
 
-        elif 'quit jarvis' in query or 'get lost' in query or 'f***' in query or 'shut' in query or 'stop listening' in query:
+        elif 'quit jarvis' in query or 'stop listening' in query:
             a.speak("Thanks for visiting sir!")
             quit()
 
-        elif 'who you' in query:
+        elif 'who are you' in query:
             a.speak("Hello sir, I am Jarvis, an intelligent AI made by Shravan with python.")
 
         elif 'how are you' in query:
@@ -156,17 +149,17 @@ if __name__ == "__main__":
         elif 'open stack overflow' in query:
             access_web('https://www.stackoverflow.com')
 
-        # NEEDs IMPROVEMENT HERE
-        elif 'google' in query.lower():
+        elif 'google' in query:
             query = query.replace("google", "")
-            access_web(f'google.com')
-            time.sleep(5)
-            p.typewrite(query)
-            p.press('enter')
+            access_web(f"https://google.co.in/search?q={query}")
 
+        elif "show photos for" in query:
+            place = query.replace("show photos for", "")
+            url = "https://www.bing.com/images/search?q={}".format(place)
+            access_web(url)
 
         elif 'open github' in query:
-            access_web('https://github.com/Shravan-1908/First_Repo')
+            access_web('https://github.com/Shravan-1908')
 
         elif 'open instagram' in query:
             access_web('https://www.instagram.com/')
@@ -175,14 +168,11 @@ if __name__ == "__main__":
             access_web('https://discord.com/channels/@me')
         
         elif 'play music' in query or 'music' in query:
+            a.speak("Playing music from your favorites..")
             music_path = r"MUSIC DIRECTORY HERE"
-            songs = os.listdir(music_path)
-            a.speak("Playing songs from your favorites...")
-            for i in songs:
-                if i.endswith(".mp3"):
-                    playable = random.choice(songs)
-                    os.startfile(os.path.join(music_path, playable))
-                    break
+            music_ext = ["mp3", "wav", "ogg"]
+            playables = [songs for songs in os.listdir(music_path) if songs.split(".")[-1] in music_ext]
+            os.startfile(os.path.join(music_path, random.choice(playables)))
 
         elif 'you hear' in query:
             a.speak("I usually hear EDM. My favorite artist is Illenium.")
@@ -262,7 +252,8 @@ if __name__ == "__main__":
                 zoom_meeting("MEETING ID HERE", "PASSWORD HERE")
             a.speak("If you want to have the meeting controls, just say meeting controls")
             zoom_counter += 1 
-# YOU CAN ADD MORE SUBJECTS
+            # YOU CAN ADD MORE SUBJECTS HERE
+            
         elif 'meeting control' in query:
             if zoom_counter < 1:
                 a.speak("You arent in any meeting right now!")
@@ -308,15 +299,6 @@ if __name__ == "__main__":
             time.sleep(2)
             p.typewrite('Whatsapp')
             p.press('enter')
-
-        elif 'switch to last app' in query:
-            a.speak("Switching...")
-            p.hotkey('alt', 'tab')
-        elif 'close the last app' in query:
-            a.speak("Closing the last app opened...")
-            p.hotkey('alt', 'tab')
-            time.sleep(2)
-            p.hotkey('alt', 'f4')
 
 
         elif 'snake water gun game' in query:
