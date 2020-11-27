@@ -2,7 +2,7 @@
 **Desktop Assistant** - An ultimate desktop assistant that makes your life easier by automating some mundane, daily tasks. It's an AI without any algorithm. 
 
 ## Functionalities:
-* runs some applications
+* starts some applications
 * automatically joins ZOOM meetings
 * reports latest news and weather 
 * runs games namely, Guess the number and Snake Water Gun on the console
