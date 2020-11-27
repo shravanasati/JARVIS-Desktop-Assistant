@@ -1,5 +1,20 @@
 # JARVIS-Desktop-Assistant
-**Desktop Assistant** - An ultimate desktop assistant that make your life easy by automating some silly, daily tasks. It's an AI but without ML. 
+**Desktop Assistant** - An ultimate desktop assistant that makes your life easier by automating some mundane, daily tasks. It's an AI without any algorithm. 
+
+## Functionalities:
+* runs some applications
+* automatically joins ZOOM meetings
+* reports latest news and weather 
+* runs games namely, Guess the number and Snake Water Gun on the console
+* has speech recognition property which enables user to look up in the internet
+* can change the robotic voice from male's voice to female's voice
+* informs the magnitude of confirmed cases of SARS-COV2 of the country asked (and of India by default)
+* initiates timer and stopwatch
+* can send as well as read emails
+* kicks off screen recording when asked through Icecream screen recorder
+* automatically displays images from web browser when asked to do so
+
+
 NOTE: Provide URLs and application paths for the repective sites/apps to run this program. Also find the dependencies for this program below.
 
 *External Modules required:*
