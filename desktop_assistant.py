@@ -5,7 +5,6 @@ from news_reporter import general_news, tech_news
 from weather_monitor import weather
 from snake_water_gun import snake_water_gun
 from guess_number import guess_number
-from email_sender import send_mail
 from spammer import Spammer
 
 p.FAILSAFE = True
@@ -37,6 +36,20 @@ class Voices:
         engine.runAndWait()
     
 a = Voices()
+
+def send_mail(to, subject, body):
+    your_email = ""
+    email_pswd = ""
+    try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.ehlo()
+            server.starttls()
+            server.login(your_email, email_pswd)
+            server.sendmail(your_email, to, f"Subject: {subject}\n\n{body}")
+            server.quit()
+
+    except Exception as e:
+            print(e)
 
 def wish():
     """wishes the user according to time"""
