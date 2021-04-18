@@ -18,11 +18,15 @@
 NOTE: Provide URLs and application paths for the repective sites/apps to run this program. Also find the dependencies for this program below. Zoom and IceCream Screen Recorder are required to perform two of the above tasks.
 
 *External Modules required:*
-- pyttsx3 --> ```pip install pyttsx3``` == For speaking ability.
-- SpeechRecognition --> ```pip install SpeechRecognition``` == For listening ability.
-- wikipedia --> ```pip install wikipedia``` == To search through the wikipedia for the query.
-- pyautogui --> ```pip install pyautogui``` == For controlling the GUI.
-- pyaudio --> ```pip install pyaudio``` == Dependency for speech recognition module.
+- pyttsx3 --> For speaking ability.
+- SpeechRecognition --> For listening ability.
+- wikipedia --> To search through the wikipedia for the query.
+- pyautogui -->  For controlling the GUI.
+- pyaudio --> Dependency for speech recognition module.
+
+To install all the dependencies at once, execute:
+
+`pip install -r requirements.txt`
 
 I've imported some of the functions/classes from my own python scripts. These scripts are:
 - [news_reporter](https://github.com/Shravan-1908/Real-Time-Reporting)
