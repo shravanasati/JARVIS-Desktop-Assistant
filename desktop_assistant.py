@@ -6,6 +6,7 @@ from weather_monitor import weather
 from snake_water_gun import snake_water_gun
 from guess_number import guess_number
 from spammer import Spammer
+import gui
 
 p.FAILSAFE = True
 
@@ -28,6 +29,7 @@ def female_voice(self, string):
 
 class Voices:
     def speak(self, audio):
+        gui.speak(audio)  # Display message in GUI
         """speaks the given argument"""
         engine = pyttsx3.init('sapi5')
         voice = engine.getProperty('voices')
@@ -120,7 +122,7 @@ if __name__ == "__main__":
     screen_counter = 0
     timer_counter = 0
     stopwatch_counter = 0
-    while 1:
+    def run_jarvis():
         query = command().lower()
 
         if 'wikipedia' in query:
@@ -422,5 +424,5 @@ if __name__ == "__main__":
             print(f"There are {today['Cases']} confirmed corona cases in India.")
             a.speak(f"There are {today['Cases']} confirmed corona cases in India.")
 
-        else:
-            pass
+    gui.set_speak_command(run_jarvis)
+    gui.mainloop()
