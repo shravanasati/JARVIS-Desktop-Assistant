@@ -29,11 +29,11 @@ To install all the dependencies at once, execute:
 `pip install -r requirements.txt`
 
 I've imported some of the functions/classes from my own python scripts. These scripts are:
-- [news_reporter](https://github.com/Shravan-1908/Real-Time-Reporting)
-- [weather_monitor](https://github.com/Shravan-1908/Real-Time-Reporting)
-- [snake_water_gun](https://github.com/Shravan-1908/The-Leap)
-- [guess_number](https://github.com/Shravan-1908/The-Leap)
-- [spammer](https://github.com/Shravan-1908/Spammer)
+- [news_reporter](https://github.com/shravanasati/Real-Time-Reporting)
+- [weather_monitor](https://github.com/shravanasati/Real-Time-Reporting)
+- [snake_water_gun](https://github.com/shravanasati/The-Leap)
+- [guess_number](https://github.com/shravanasati/The-Leap)
+- [spammer](https://github.com/shravanasati/Spammer)
 
 Make sure you place these scripts in the same working directory as of this one.
 

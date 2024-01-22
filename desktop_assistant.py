@@ -174,7 +174,7 @@ if __name__ == "__main__":
             access_web(url)
 
         elif 'open github' in query:
-            access_web('https://github.com/Shravan-1908')
+            access_web('https://github.com/shravanasati')
 
         elif 'open instagram' in query:
             access_web('https://www.instagram.com/')
